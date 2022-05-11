@@ -1,3 +1,4 @@
+import useNoticias from '../hooks/useNoticias';
 import {
   FormControl,
   InputLabel,
@@ -23,11 +24,12 @@ const CATEGORIAS: ICategoria[] = [
 ];
 
 const Formulario = (): JSX.Element => {
+    const {categoria,handleChangeCategoria} = useNoticias()
   return (
     <form>
       <FormControl fullWidth>
         <InputLabel>Categoría</InputLabel>
-        <Select label="Categoría">
+        <Select label="Categoría" onChange={handleChangeCategoria} value={categoria}>
           {CATEGORIAS.map(({ value, label }) => (
             <MenuItem key={value} value={value}>
               {label}
