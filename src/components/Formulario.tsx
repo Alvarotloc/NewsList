@@ -4,8 +4,6 @@ import {
   InputLabel,
   Select,
   MenuItem,
-  Button,
-  Box,
 } from "@mui/material";
 
 interface ICategoria {
@@ -36,12 +34,6 @@ const Formulario = (): JSX.Element => {
             </MenuItem>
           ))}
         </Select>
-        <Box sx={{marginTop:2}}>
-
-        <Button fullWidth variant='contained' color='primary'>
-            Buscar Noticias
-        </Button>
-        </Box>
       </FormControl>
     </form>
   );
